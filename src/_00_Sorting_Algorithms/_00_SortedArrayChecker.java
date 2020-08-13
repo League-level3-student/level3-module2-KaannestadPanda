@@ -10,7 +10,7 @@ public class _00_SortedArrayChecker {
 	//   array is in ascending order and false otherwise
 static boolean intArraySorted(int[] a) {
 	
-	for(int i = 0; i<a.length;i++) {
+	for(int i = 0; i<a.length-1;i++) {
 		if(a[i]>a[i+1]) {
 			return false;
 		}
@@ -26,7 +26,7 @@ static boolean intArraySorted(int[] a) {
 	//   array is in ascending order and false otherwise
 static boolean doubleArraySorted(double[] a) {
 	
-for(int i = 0; i<a.length;i++) {
+for(int i = 0; i<a.length-1;i++) {
 	if(a[i]>a[i+1]) {
 		return false;
 	}
@@ -45,7 +45,8 @@ return true;
 	//   array is in alphabetical order and false otherwise
 	//   (You can compare characters just like integers)
 static boolean charArraySorted(char[] a) {
-for(int i = 0; i<a.length;i++) {
+	
+for(int i = 0; i<a.length-1;i++) {
 if(a[i]>a[i+1]) {
 return false;
 }
@@ -60,5 +61,15 @@ return true;
 	//   The method returns true if the String
 	//   array is in alphabetical order and false otherwise
 	//   (Use the compareTo(String) method)
+
+static boolean stringArraySorted(String[] a) {
+	for(int i = 0; i<a.length-1;i++) {
+		if(a[i].compareTo(a[i+1])>0) {
+			return false;
+		}
+		
+	}
+	return true;
+}
 
 }
